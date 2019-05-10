@@ -9,5 +9,4 @@ public class UsecaseeditorApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(UsecaseeditorApplication.class, args);
 	}
-
 }
