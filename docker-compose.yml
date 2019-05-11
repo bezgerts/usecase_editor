@@ -2,6 +2,7 @@ version: '3'
 services:
   spring-usecase-web:
     build: .
+    image: spring-usecase-web
     ports:
      - "8080:8080"
     environment:
