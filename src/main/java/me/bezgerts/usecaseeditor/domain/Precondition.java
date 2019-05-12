@@ -1,5 +1,7 @@
 package me.bezgerts.usecaseeditor.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -13,6 +15,7 @@ public class Precondition {
     private String textDescription;
 
     @ManyToMany(mappedBy = "preconditions")
+    @JsonBackReference
     private List<UseCase> useCases;
 
 

@@ -1,5 +1,7 @@
 package me.bezgerts.usecaseeditor.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -15,12 +17,15 @@ public class UseCase {
     private String description;
 
     @ManyToMany
+    @JsonManagedReference
     private List<Precondition> preconditions;
 
     @ManyToMany
+    @JsonManagedReference
     private List<Step> steps;
 
     @ManyToMany
+    @JsonManagedReference
     private List<Postcondition> postconditions;
 
     public UseCase() {
